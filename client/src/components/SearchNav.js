@@ -6,9 +6,8 @@ import meme_park_logo from './meme_park_logo_circle.png'
 
 
 
-const SearchNav = () => {
+const SearchNav = ({setSearchTerm, handleSubmit}) => {
     const imagecss = {width: "75px"}  
-    
     
     return (
       
@@ -22,8 +21,8 @@ const SearchNav = () => {
             />
             </Navbar.Brand>
         
-            <Form style={{width: "100vw"}}>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Form onSubmit={handleSubmit} style={{width: "100vw"}}>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => setSearchTerm(e.target.value)} />
             </Form>
         </Navbar>
        
