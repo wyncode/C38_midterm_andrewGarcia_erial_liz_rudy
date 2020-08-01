@@ -7,27 +7,27 @@ import Topics from './Topics'
 
 const HomeBody = () => {
     return (
-        <Container fluid>
+        <Container>
         <Row>
-            <div>Topic #1</div>
+            <h1>Topic #1</h1>
             <Col xs={12}>
                 <Topics />
             </Col>
         </Row>
         <Row>
-            <div>Topic #2</div>
+            <h1>Topic #2</h1>
             <Col xs={12}>
             <Topics />
             </Col>
         </Row>
         <Row>
-            <div>Topic #3</div>
+            <h1>Topic #3</h1>
             <Col xs={12}>
             <Topics />
             </Col>
         </Row>
         <Row>
-            <div>Topic #4</div>
+            <h1>Topic #4</h1>
             <Col xs={12}>
             <Topics />
             </Col>
