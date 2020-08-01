@@ -20,7 +20,7 @@ const MemeBody = () => {
             </Col>
         </Row>
         <Row>
-            <Col sm={12}>
+            <Col xs={12}>
                 <SuggestionsGrid />
             </Col>
         </Row>
