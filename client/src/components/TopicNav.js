@@ -1,25 +1,29 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 
 
 const TopicNav = () => {
+        const navlinkcss = {color: "white"}
+        const navcss = {display: "flex", justifyContent: "space-around", width: "100%"}  
+
+
     return (
         <Navbar bg="dark">
-            <Navbar.Brand href="#home">
-            <img
-                src="http://placehold.jp/99ccff/003366/40x40.png"
-                className="d-inline-block align-top"
-                alt="logo"
-            />
-            </Navbar.Brand>
+           <Nav style={navcss} > 
+            <Nav.Link style={navlinkcss} href="#reactions">Reactions</Nav.Link>
+            <Nav.Link style={navlinkcss} href="#celebrities">Celebrities</Nav.Link>
+            <Nav.Link style={navlinkcss} href="#music">Music</Nav.Link>
+            </Nav> 
         
-            <Form inline>
+            {/* <Form>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            </Form>
+            </Form> */}
         </Navbar>
     )
 }
+
 
 export default TopicNav
