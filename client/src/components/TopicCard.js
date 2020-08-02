@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const TopicCard = () => {
+const TopicCard = ({link}) => {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -13,7 +13,7 @@ const TopicCard = () => {
       </Card.Body>
       <Card.Footer>
         <Button style={{ width: '100%' }} variant="secondary">
-          Link
+          Link {link}
         </Button>
       </Card.Footer>
     </Card>
