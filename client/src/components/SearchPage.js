@@ -1,14 +1,13 @@
-import React from 'react'
-import SearchNav from './SearchNav'
-import SearchBody from './SearchBody'
+import React from 'react';
+import SearchBody from './SearchBody';
 
 const SearchPage = () => {
-    return (
-        <>
-            <SearchNav />
-            <SearchBody />
-        </>
-    )
-}
+  return (
+    <>
+      <h1>Search Page</h1>
+      <SearchBody />
+    </>
+  );
+};
 
-export default SearchPage
+export default SearchPage;

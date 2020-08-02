@@ -1,14 +1,14 @@
-import React from 'react'
-import SearchNav from './SearchNav'
-import ErrorBody from './ErrorBody'
+import React from 'react';
+import SearchNav from './SearchNav';
+import ErrorBody from './ErrorBody';
 
 const ErrorPage = () => {
-    return (
-        <>
-            <SearchNav />
-            <ErrorBody />
-        </>
-    )
-}
+  return (
+    <>
+      <SearchNav />
+      <ErrorBody />
+    </>
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;
