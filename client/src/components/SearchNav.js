@@ -30,6 +30,8 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
       .catch((error) => {
         console.log(error);
       });
+
+     
   };
 
   return (
@@ -42,7 +44,7 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
           alt="logo"
         />
       </Navbar.Brand>
-      <Link to="/search">search</Link>
+      <Link to="/search"></Link>
 
       <Form onSubmit={handleSubmit} style={{ width: '100vw' }}>
         <FormControl

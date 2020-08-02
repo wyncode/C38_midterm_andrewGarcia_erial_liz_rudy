@@ -11,7 +11,6 @@ const SearchPage = ({ results }) => {
         <Col>
           {results.map((gif) => (
             <>
-              <h1>{gif.title}</h1>
               <TopicCard id={gif.id} link={gif.url} />
             </>
           ))}
