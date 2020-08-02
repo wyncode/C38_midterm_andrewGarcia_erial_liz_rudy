@@ -8,15 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {
   return (
     
-    // <Router> 
-    //   <Switch>
-    //     <Route path="./MemePage.js" component={MemePage} />
-    //     <HomePage />
-    //     <Route path="./HomePage.js" component={HomePage} />
-    //   </Switch>
-    //   </Router>
-
-    <SearchPage />
+    <Router> 
+      <Switch>
+        <Route path="./MemePage.js" component={MemePage} />
+        <HomePage />
+        <Route path="./HomePage.js" component={HomePage} />
+      </Switch>
+      </Router>
   )
 };
 
