@@ -11,11 +11,6 @@ const SideLinks = () => {
   return (
     <>
       <div style={rowStyle}>
-        <Button style={{ width: '70%' }} variant="dark">
-          Random Meme
-        </Button>
-      </div>
-      <div style={rowStyle}>
         <ButtonGroup
           style={{ width: '70%' }}
           vertical
