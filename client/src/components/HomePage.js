@@ -1,15 +1,46 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import SearchNav from './SearchNav';
-import TopicNav from './TopicNav';
-import HomeBody from './HomeBody';
+import React, {useState, useEffect} from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Topics from './Topics';
+import Jumbotron from 'react-bootstrap/Jumbotron'
 
 const HomePage = () => {
+  const [trendingMeme, setTrendingMeme] = useState([]);
+
+  useEffect(() => {
+        fetch('/api/trending', {
+          method: 'get',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          }})
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        setTrendingMeme(data);
+        console.log(trendingMeme);
+      })
+      .catch(error => console.error(error))
+  }, []);
+
   return (
-    <>
-      {/* <TopicNav /> */}
-      <HomeBody />
-    </>
+    <Container>
+      <Row>
+        <Col xs={12}>
+            <Jumbotron>
+              <h1>Welcome to Meme Park!</h1>
+              <p>
+                The number one source for trending memes!
+              </p>
+          </Jumbotron>
+          <h1>Trending Memes: </h1>
+          {
+            trendingMeme && <Topics trendingMeme={trendingMeme}/>
+          }
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

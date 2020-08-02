@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const TopicCard = ({ id, link}) => {
+const HomePageCard = ({ imgUrl, id, title }) => {
   const history = useHistory();
 
   const handleNavigate = () => {
@@ -12,9 +12,8 @@ const TopicCard = ({ id, link}) => {
 
   return (
     <Card style={{ width: '200px', margin: "10px"}}>
-      <img src={link} alt="foo" />
       <Card.Body>
-        <Card.Img variant="top" src={link} />
+        <Card.Img variant="top" src={imgUrl} />
       </Card.Body>
       <Card.Footer>
         <Button
@@ -22,11 +21,11 @@ const TopicCard = ({ id, link}) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          Link {link}
+          {title}
         </Button>
       </Card.Footer>
     </Card>
   );
 };
 
-export default TopicCard;
+export default HomePageCard;

@@ -45,4 +45,28 @@ router.get('/api/single-gif/:id', async (req, res) => {
   }
 });
 
+router.get('/api/trending', async (req, res) => {
+  const trendingArray = [];
+
+  try {
+    const { data } = await axios.get(
+      `http://api.giphy.com/v1/gifs/trending?api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV&limit=20`
+      );
+      data.data.map((meme) => {
+        trendingArray.push({
+          title: meme.title,
+          id: meme.id,
+          url: meme.url,
+          img_url: meme.images.original.url
+        });
+      });
+      console.log(trendingArray);
+      res.json(trendingArray);
+      // res.json(data);
+      // res.json(data.data);
+    } catch (error) {
+      res.json({ error: error.toString() });
+    }
+  });
+
 module.exports = router;
