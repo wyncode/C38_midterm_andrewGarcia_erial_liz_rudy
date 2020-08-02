@@ -11,7 +11,6 @@ const MemeBody = ({ meme }) => {
   return (
     <Container fluid>
       <div>
-        <p>delete me soon</p>
         <p>{meme.title}</p>
       </div>
       <Row>
@@ -24,7 +23,6 @@ const MemeBody = ({ meme }) => {
       </Row>
       <Row>
         <Col xs={12}>
-          <SuggestionsGrid />
         </Col>
       </Row>
     </Container>
