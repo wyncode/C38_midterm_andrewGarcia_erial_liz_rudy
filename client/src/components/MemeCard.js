@@ -14,7 +14,7 @@ const MemeCard = () => {
 
   return (
     <Card style={{ width: '70%' }} className="text-center mx-auto">
-      <Card.Header>{gif.title}</Card.Header>
+      <Card.Header></Card.Header>
       <Card.Body>
         <Card.Img src="http://placehold.jp/99ccff/003366/600x400.png" />
       </Card.Body>
