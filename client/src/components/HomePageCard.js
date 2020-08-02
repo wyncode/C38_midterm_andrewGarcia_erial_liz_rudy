@@ -9,7 +9,7 @@ const HomePageCard = ({ imgUrl, id, title }) => {
   const handleNavigate = () => {
     history.push(`/meme/${id}`);
   };
-console.log("****", imgUrl, title)
+
   return (
     <Card style={{ width: '200px', margin: "10px"}}>
       <Card.Body>

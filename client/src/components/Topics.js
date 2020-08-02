@@ -16,7 +16,7 @@ const Topics = ({trendingMeme}) => {
         <Col xs={12}>
           <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
             {trendingMeme.map(item => {
-               return <HomePageCard key={item.id} title={item.title} imgUrl={item.img_url}/>
+               return <HomePageCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url}/>
             })}
             
           </div>
