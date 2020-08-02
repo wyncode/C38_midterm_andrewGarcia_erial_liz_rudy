@@ -7,9 +7,13 @@ import SideLinks from './SideLinks';
 import Alert from 'react-bootstrap/Alert';
 import SuggestionsGrid from './SuggestionsGrid';
 
-const MemeBody = () => {
+const MemeBody = ({ meme }) => {
   return (
     <Container fluid>
+      <div>
+        <p>delete me soon</p>
+        <p>{meme.title}</p>
+      </div>
       <Row>
         <Col sm={12} md={{ span: 8, offset: 1 }}>
           <MemeCard />

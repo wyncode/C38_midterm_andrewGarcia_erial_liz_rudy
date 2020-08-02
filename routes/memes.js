@@ -24,4 +24,25 @@ router.get('/api/search', async (req, res) => {
   }
 });
 
+router.get('/api/single-gif/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { data } = await axios.get(
+      `http://api.giphy.com/v1/gifs/${id}?api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV`
+    );
+    if (!data.data) {
+      res.json({ error: 'No gifs found' });
+    }
+
+    res.json({
+      title: data.data.title,
+      id: data.data.id,
+      url: data.data.url,
+      embed_url: data.data.embed_url
+    });
+  } catch (error) {
+    res.json({ error: error.toString() });
+  }
+});
+
 module.exports = router;

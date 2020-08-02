@@ -1,18 +1,27 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const TopicCard = ({link}) => {
+const TopicCard = ({ id, link }) => {
+  const history = useHistory();
+
+  const handleNavigate = () => {
+    history.push(`/meme/${id}`);
+  };
+
   return (
     <Card style={{ width: '18rem' }}>
+      <img src={link} alt="foo" />
       <Card.Body>
-        <Card.Img
-          variant="top"
-          src="http://placehold.jp/99ccff/003366/100x100.png"
-        />
+        <Card.Img variant="top" src={link} />
       </Card.Body>
       <Card.Footer>
-        <Button style={{ width: '100%' }} variant="secondary">
+        <Button
+          onClick={handleNavigate}
+          style={{ width: '100%' }}
+          variant="secondary"
+        >
           Link {link}
         </Button>
       </Card.Footer>
