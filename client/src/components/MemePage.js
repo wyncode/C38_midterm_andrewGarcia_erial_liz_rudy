@@ -13,8 +13,6 @@ const MemePage = (props) => {
       });
   }, []);
 
-  console.log('what is the meme', meme);
-
   return meme ? <MemeBody meme={meme} /> : null;
 };
 
