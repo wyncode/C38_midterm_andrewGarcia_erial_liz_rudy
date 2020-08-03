@@ -42,7 +42,7 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
 
   return (
     <Navbar bg="dark" sticky="top" style={{ marginBottom: '40px' }}>
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img
           src={meme_park_logo}
           style={imagecss}
