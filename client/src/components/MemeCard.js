@@ -8,7 +8,13 @@ const MemeCard = ({meme}) => {
   const popover = (
     <Popover id="popover-basic">
       <Popover.Title as="h3">{meme.title}</Popover.Title>
-      <Popover.Content></Popover.Content>
+      <Popover.Content>
+      <ul>
+        <li><b>TITLE: </b>{meme.title}</li>
+        <li><b>HEIGHT: </b>{meme.height}</li>
+        <li><b> WIDTH: </b>{meme.width}</li>
+      </ul>
+      </Popover.Content>
     </Popover>
   );
 
@@ -16,7 +22,7 @@ const MemeCard = ({meme}) => {
     <Card style={{ width: '70%' }} className="text-center mx-auto">
       <Card.Header > {meme.title}</Card.Header>
       <Card.Body>
-        <Card.Img src="http://placehold.jp/99ccff/003366/600x400.png" />
+        <Card.Img src={meme.embed_url} />
       </Card.Body>
       <Card.Footer className="text-muted ">
         <OverlayTrigger trigger="click" placement="right" overlay={popover}>

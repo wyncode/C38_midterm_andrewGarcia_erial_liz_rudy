@@ -14,7 +14,7 @@ router.get('/api/search', async (req, res) => {
         title: meme.title,
         id: meme.id,
         url: meme.url,
-        embed_url: meme.embed_url
+        embed_url: meme.images.original.url
       });
     });
     res.json(searchArray);
@@ -38,7 +38,10 @@ router.get('/api/single-gif/:id', async (req, res) => {
       title: data.data.title,
       id: data.data.id,
       url: data.data.url,
-      embed_url: data.data.embed_url
+      embed_url: data.data.images.original.url,
+      type: data.data.type,
+      height: data.data.images.original.height,
+      width: data.data.images.original.width 
     });
   } catch (error) {
     res.json({ error: error.toString() });
