@@ -19,7 +19,6 @@ const MemeBody = ({meme}) => {
           <SideLinks />
         </Col>
       </Row>
-     
     </Container>
   );
 };

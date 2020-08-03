@@ -3,17 +3,17 @@ import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const TopicCard = ({ searchData }) => {
+const HomePageCard = ({ imgUrl, id, title }) => {
   const history = useHistory();
 
   const handleNavigate = () => {
-    history.push(`/meme/${searchData.id}`);
+    history.push(`/meme/${id}`);
   };
 
   return (
     <Card style={{ width: '200px', margin: "10px"}}>
       <Card.Body>
-        <Card.Img variant="top" />
+        <Card.Img variant="top" src={imgUrl} />
       </Card.Body>
       <Card.Footer>
         <Button
@@ -21,11 +21,11 @@ const TopicCard = ({ searchData }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          {searchData.title}
+          {title}
         </Button>
       </Card.Footer>
     </Card>
   );
 };
 
-export default TopicCard;
+export default HomePageCard;

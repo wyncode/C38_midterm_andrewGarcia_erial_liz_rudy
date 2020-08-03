@@ -8,10 +8,10 @@ const SearchPage = ({ results }) => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col style={{display:"flex", flexWrap:"wrap"}}>
           {results.map((gif) => (
             <>
-              <TopicCard id={gif.id} link={gif.url} />
+              <TopicCard searchData={gif} />
             </>
           ))}
         </Col>
