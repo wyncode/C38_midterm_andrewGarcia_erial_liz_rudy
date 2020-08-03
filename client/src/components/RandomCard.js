@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const HomePageCard = ({ imgUrl, id, title }) => {
+const RandomCard = ({ id, title, imgUrl }) => {
   const history = useHistory();
 
   const handleNavigate = () => {
@@ -11,9 +11,9 @@ const HomePageCard = ({ imgUrl, id, title }) => {
   };
 
   return (
-    <Card style={{ width: '200px', margin: "10px"}}>
+    <Card style={{ width: '300px', margin: "10px"}}>
       <Card.Body>
-        <Card.Img variant="top" src={imgUrl}  alt={title}/>
+        <Card.Img variant="top" src={imgUrl}  alt="Gif"/>
       </Card.Body>
       <Card.Footer>
         <Button
@@ -28,4 +28,4 @@ const HomePageCard = ({ imgUrl, id, title }) => {
   );
 };
 
-export default HomePageCard;
+export default RandomCard;

@@ -71,4 +71,25 @@ router.get('/api/trending', async (req, res) => {
     }
   });
 
+router.get('/api/random', async (req, res) => {
+  const randomArray = [];
+
+  try {
+    const { data } = await axios.get(
+      `http://api.giphy.com/v1/gifs/trending?api_key=${process.env.GIPHY_API_KEY}`
+      );
+      data.data.map((meme) => {
+        randomArray.push({
+          title: meme.title,
+          id: meme.id,
+          url: meme.url,
+          img_url: meme.images.original.url
+        });
+      });
+      res.json(randomArray);
+
+    } catch (error) {
+      res.json({ error: error.toString() });
+    }
+  });
 module.exports = router;
