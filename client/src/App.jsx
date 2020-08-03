@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //import ErrorPage from './components/ErrorPage'
 import MemePage from './components/MemePage';
 import HomePage from './components/HomePage';
+import ErrorPage from './components/ErrorPage';
 import SearchPage from './components/SearchPage';
 import SearchNav from './components/SearchNav';
 import './App.css';
@@ -19,6 +20,7 @@ const App = () => {
       />
       <Switch>
         <Route exact path="/meme/:id" component={MemePage} />
+        <Route exact path="/error" component={ErrorPage} />
         <Route exact path="/" component={HomePage} />
         <Route
           exact
