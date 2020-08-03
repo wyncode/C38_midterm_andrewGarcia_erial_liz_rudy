@@ -4,17 +4,17 @@ import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 
-const MemeCard = () => {
+const MemeCard = ({meme}) => {
   const popover = (
     <Popover id="popover-basic">
-      <Popover.Title as="h3">SOME TITLE</Popover.Title>
-      <Popover.Content>MEME INFORMATION</Popover.Content>
+      <Popover.Title as="h3">{meme.title}</Popover.Title>
+      <Popover.Content></Popover.Content>
     </Popover>
   );
 
   return (
     <Card style={{ width: '70%' }} className="text-center mx-auto">
-      <Card.Header></Card.Header>
+      <Card.Header > {meme.title}</Card.Header>
       <Card.Body>
         <Card.Img src="http://placehold.jp/99ccff/003366/600x400.png" />
       </Card.Body>
