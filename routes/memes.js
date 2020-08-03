@@ -7,7 +7,7 @@ router.get('/api/search', async (req, res) => {
   try {
     const { searchQuery } = req.query;
     const { data } = await axios.get(
-      `http://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=${process.env.GIPHY_API_KEY}&limit=50`
+      `http://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=${process.env.GIPHY_API_KEY}&limit=100`
     );
     data.data.map((meme) => {
       searchArray.push({
@@ -63,7 +63,6 @@ router.get('/api/trending', async (req, res) => {
           img_url: meme.images.original.url
         });
       });
-      console.log(trendingArray);
       res.json(trendingArray);
       // res.json(data);
       // res.json(data.data);
