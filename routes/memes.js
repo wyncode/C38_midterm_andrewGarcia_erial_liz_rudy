@@ -63,7 +63,6 @@ router.get('/api/trending', async (req, res) => {
           img_url: meme.images.original.url
         });
       });
-      console.log(trendingArray);
       res.json(trendingArray);
       // res.json(data);
       // res.json(data.data);

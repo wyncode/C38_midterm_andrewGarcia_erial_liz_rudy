@@ -34,7 +34,7 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
         history.push('/search');
       })
       .catch((error) => {
-        console.log(error);
+    
       });
 
      
