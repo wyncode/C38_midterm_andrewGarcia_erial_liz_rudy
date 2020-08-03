@@ -7,7 +7,7 @@ router.get('/api/search', async (req, res) => {
   try {
     const { searchQuery } = req.query;
     const { data } = await axios.get(
-      `http://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV&limit=5`
+      `http://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV&limit=50`
     );
     data.data.map((meme) => {
       searchArray.push({

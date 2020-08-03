@@ -11,7 +11,7 @@ const MemePage = (props) => {
       .then((data) => {
         setMeme(data);
       });
-  }, []);
+  }, [id]);
 
   return meme ? <MemeBody meme={meme} /> : null;
 };
