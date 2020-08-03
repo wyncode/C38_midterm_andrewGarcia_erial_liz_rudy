@@ -13,7 +13,7 @@ const HomePageCard = ({ imgUrl, id, title }) => {
   return (
     <Card style={{ width: '200px', margin: "10px"}}>
       <Card.Body>
-        <Card.Img variant="top" src={imgUrl} />
+        <Card.Img variant="top" src={imgUrl}  alt="Gif"/>
       </Card.Body>
       <Card.Footer>
         <Button

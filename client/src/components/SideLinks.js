@@ -23,13 +23,13 @@ const SideLinks = () => {
         </ButtonGroup>
       </div>
       <div style={rowStyle}>
-        <a href="https://www.webfreecounter.com/" target="_blank">
+      
           <img
             src="https://www.webfreecounter.com/hit.php?id=gmufdfcn&nd=6&style=11"
             border="0"
             alt="visitor counter"
           />
-        </a>{' '}
+        {' '}
         &nbsp; Views
       </div>
     </>

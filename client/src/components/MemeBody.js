@@ -4,8 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MemeCard from './MemeCard';
 import SideLinks from './SideLinks';
-import Alert from 'react-bootstrap/Alert';
-import SuggestionsGrid from './SuggestionsGrid';
+
 
 const MemeBody = ({meme}) => {
   return (

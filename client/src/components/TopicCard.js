@@ -14,7 +14,9 @@ const TopicCard = ({ searchData }) => {
     <Card style={{ width: '200px', margin: "10px"}}>
       <Card.Body>
         <Card.Img variant="top" 
-        src={searchData.embed_url}/>
+        src={searchData.embed_url}
+        alt="Gif"
+        />
       </Card.Body>
       <Card.Footer>
         <Button

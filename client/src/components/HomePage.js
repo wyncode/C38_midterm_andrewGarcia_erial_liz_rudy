@@ -18,9 +18,8 @@ const HomePage = () => {
           }})
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+     
         setTrendingMeme(data);
-        console.log(trendingMeme);
       })
       .catch(error => console.error(error))
   }, []);

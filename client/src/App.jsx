@@ -27,6 +27,7 @@ const App = () => {
             return <SearchPage {...props} results={results} />;
           }}
         />
+        
       </Switch>
     </Router>
   );

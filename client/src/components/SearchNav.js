@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import meme_park_logo from './meme_park_logo_circle.png';
 import { useHistory } from 'react-router';
-import { Link } from 'react-router-dom';
+
 
 const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
   const imagecss = { width: '75px' };
