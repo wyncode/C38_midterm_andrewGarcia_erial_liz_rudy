@@ -21,7 +21,7 @@ const RandomCard = ({ id, title, imgUrl }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          {title}
+          Click Here
         </Button>
       </Card.Footer>
     </Card>

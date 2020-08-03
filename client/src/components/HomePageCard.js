@@ -21,7 +21,7 @@ const HomePageCard = ({ imgUrl, id, title }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          {title}
+          Click Here
         </Button>
       </Card.Footer>
     </Card>

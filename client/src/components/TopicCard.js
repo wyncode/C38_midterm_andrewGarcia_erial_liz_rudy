@@ -24,7 +24,7 @@ const TopicCard = ({ searchData }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          {searchData.title}
+          Click Here
         </Button>
       </Card.Footer>
     </Card>

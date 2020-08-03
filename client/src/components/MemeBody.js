@@ -43,7 +43,7 @@ const MemeBody = ({meme}) => {
         </Col>
       </Row>
       <Row>
-        <Col style={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
+        <Col style={{display:'flex', flexWrap:'wrap', justifyContent:"center"}}>
         {randomMeme.map(item => {
                return <RandomCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url}  alt="Gif"/>
             })}

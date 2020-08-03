@@ -20,7 +20,7 @@ const MemeCard = ({meme}) => {
 
   return (
     <Card style={{ width: '70%' }} className="text-center mx-auto">
-      <Card.Header > {meme.title}</Card.Header>
+      <Card.Header > <b>{meme.title}</b> </Card.Header>
       <Card.Body>
         <Card.Img src={meme.embed_url}   alt="Gif"/>
       </Card.Body>
