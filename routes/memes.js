@@ -7,7 +7,7 @@ router.get('/api/search', async (req, res) => {
   try {
     const { searchQuery } = req.query;
     const { data } = await axios.get(
-      `http://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV&limit=50`
+      `http://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=${process.env.GIPHY_API_KEY}&limit=50`
     );
     data.data.map((meme) => {
       searchArray.push({
@@ -28,7 +28,7 @@ router.get('/api/single-gif/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { data } = await axios.get(
-      `http://api.giphy.com/v1/gifs/${id}?api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV`
+      `http://api.giphy.com/v1/gifs/${id}?api_key=${process.env.GIPHY_API_KEY}`
     );
     if (!data.data) {
       res.json({ error: 'No gifs found' });
@@ -53,7 +53,7 @@ router.get('/api/trending', async (req, res) => {
 
   try {
     const { data } = await axios.get(
-      `http://api.giphy.com/v1/gifs/trending?api_key=9dHkamrf5YHILykCfby1TJcTTWsKa3tV&limit=20`
+      `http://api.giphy.com/v1/gifs/trending?api_key=${process.env.GIPHY_API_KEY}&limit=20`
       );
       data.data.map((meme) => {
         trendingArray.push({
