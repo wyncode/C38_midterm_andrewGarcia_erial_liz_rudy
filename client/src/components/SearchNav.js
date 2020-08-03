@@ -13,6 +13,8 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const form = e.target;
+
     fetch(`/api/search?searchQuery=${searchTerm}`, {
       method: 'get',
       headers: {
@@ -22,7 +24,12 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        form.reset();
+
+        if (res.length === 0) {
+          return history.push('/error');
+        }
+
         setResults(res);
         history.push('/search');
       })
