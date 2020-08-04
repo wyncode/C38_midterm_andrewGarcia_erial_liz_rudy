@@ -7,12 +7,15 @@ import SearchNav from './components/SearchNav';
 import Credit from './components/Credit';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Scroll from './components/Scroll';
+
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
 
   return (
     <Router>
+      <Scroll />
       <SearchNav
         searchTerm={searchTerm}
         setResults={setResults}
