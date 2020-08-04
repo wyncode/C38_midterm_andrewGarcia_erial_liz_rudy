@@ -6,7 +6,7 @@
     --med-text: rgb(175, 175, 175);
     --dark-text: black;
     --logo-green: #008036;
-    border: border-box;
+    box-sizing: border-box;
     font-size: 16px;
 }
 
@@ -51,7 +51,6 @@ body {
 #logo {
     width: 75px;
     transition: all .7s ease-in;
-    border: 1px solid black;
 }
 
 #logo:hover {
@@ -79,7 +78,7 @@ body {
     background-color: var(--dark-bg);
     padding: 1rem;
     margin: 5rem 0 1rem;
-    width: 40%;
+    max-width: 400px;
     border-left: .5rem solid var(--logo-green);
     border-radius: 5px;
 }
