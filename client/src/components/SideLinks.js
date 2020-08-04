@@ -3,8 +3,17 @@ import { useHistory } from "react-router-dom";
 import './style.css';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import {
+  FacebookIcon,
+  TumblrIcon,
+  TwitterIcon,
+  FacebookShareButton,
+  TumblrShareButton,
+  TwitterShareButton
 
-const SideLinks = () => {
+} from "react-share";
+
+const SideLinks = ({meme}) => {
 
   let history = useHistory();
   const rowStyle = {
@@ -18,16 +27,20 @@ const SideLinks = () => {
       </div>
       <div style={rowStyle}>
 
-        <ButtonGroup
-        id="button-gr"
-          vertical
-          aria-label="Basic example"
-          size="sm"
-        >
-          <Button className="side-btn" variant="secondary">Twitter</Button>
-          <Button  className="side-btn" variant="secondary">Facebook</Button>
-          <Button  className="side-btn" variant="secondary">Instagram</Button>
-        </ButtonGroup>
+        <div 
+          id="socialbuttons">
+       
+          <TwitterShareButton url={`/meme/${meme.id}`}>
+          <TwitterIcon size={32} round={true} />
+          </TwitterShareButton>
+          <TumblrShareButton url={`/meme/${meme.id}`}>
+          <TumblrIcon size={32} round={true} />
+          </TumblrShareButton>
+          <FacebookShareButton url={`/meme/${meme.id}`}>
+          <FacebookIcon size={32} round={true} />
+          </FacebookShareButton>
+        </div>
+         
       </div>
       <div style={rowStyle}>
           <div id="view-ctr">

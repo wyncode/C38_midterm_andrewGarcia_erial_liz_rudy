@@ -141,8 +141,10 @@ body {
     border-radius: 5px;
 }
 
-#button-gr {
+#socialbuttons {
     width: 200px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .side-btn {
