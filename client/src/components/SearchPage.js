@@ -9,13 +9,15 @@ const SearchPage = ({ results, searchTerm }) => {
   return (
     <Container>
       <Jumbotron>
-              <h1>Looking for {searchTerm} Memes...</h1>
-          </Jumbotron>
+        <h1>
+        {searchTerm ? `Looking for ${searchTerm} memes...` : 'let\'s search for a meme!'}
+        </h1>
+      </Jumbotron>
       <Row>
-        <Col style={{display:"flex", flexWrap:"wrap"}}>
+        <Col style={{display:"flex", flexWrap:"wrap", alignItems: "flex-start"}}>
           {results.map((gif) => (
             <>
-              <SearchCard key={gif.id} searchData={gif} />
+              return <SearchCard key={gif.id} searchData={gif} />
             </>
           ))}
         </Col>

@@ -1,13 +1,13 @@
 import React from 'react';
+import './style.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import meme_park_logo from './meme_park_logo_circle.png';
 import { useHistory } from 'react-router';
 
-
 const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
-  const imagecss = { width: '75px' };
+  
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -36,25 +36,26 @@ const SearchNav = ({ setSearchTerm, searchTerm, setResults }) => {
       .catch((error) => {
     
       });
-
-     
   };
 
+  // const imagecss = { width: '75px' };
+
   return (
-    <Navbar bg="dark" sticky="top" style={{ marginBottom: '40px' }}>
+    <Navbar fixed="top" style={{ height: "100px"}}>
       <Navbar.Brand href="/">
         <img
+          id="logo" 
           src={meme_park_logo}
-          style={imagecss}
-          className="d-inline-block align-top"
+          // style={imagecss}
           alt="logo"
         />
       </Navbar.Brand>
-      <Form onSubmit={handleSubmit} style={{ width: '100vw' }}>
+      <Form onSubmit={handleSubmit} style={{ width: '100%', display: "flex"}}>
         <FormControl
+          id="searchbar" 
+          style={{height: "65px"}}
           type="text"
-          placeholder="Search"
-          className="mr-sm-2"
+          placeholder="Search..."
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </Form>

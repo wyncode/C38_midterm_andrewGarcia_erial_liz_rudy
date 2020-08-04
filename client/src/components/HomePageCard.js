@@ -11,7 +11,7 @@ const HomePageCard = ({ imgUrl, id, title }) => {
   };
 
   return (
-    <Card style={{ width: '200px', margin: "10px"}}>
+    <Card style={{ width: '200px', margin: "10px 20px"}}>
       <Card.Body>
         <Card.Img variant="top" src={imgUrl}  alt={title ? title : 'a meme'}/>
       </Card.Body>

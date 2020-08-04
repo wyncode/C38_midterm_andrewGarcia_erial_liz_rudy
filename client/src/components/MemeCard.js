@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -19,8 +20,8 @@ const MemeCard = ({meme}) => {
   );
 
   return (
-    <Card style={{ width: '70%' }} className="text-center mx-auto">
-      <Card.Header > <b>{meme.title}</b> </Card.Header>
+    <Card id="meme-card" style={{ width: '70%' }} className="text-center mx-auto">
+      <Card.Header > <h4>{meme.title}</h4> </Card.Header>
       <Card.Body>
         <Card.Img src={meme.embed_url}   alt={meme.title ? meme.title : 'a meme'}/>
       </Card.Body>
