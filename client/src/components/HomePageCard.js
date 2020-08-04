@@ -13,7 +13,7 @@ const HomePageCard = ({ imgUrl, id, title }) => {
   return (
     <Card style={{ width: '200px', margin: "10px"}}>
       <Card.Body>
-        <Card.Img variant="top" src={imgUrl}  alt={title}/>
+        <Card.Img variant="top" src={imgUrl}  alt={title ? title : 'a meme'}/>
       </Card.Body>
       <Card.Footer>
         <Button
@@ -21,7 +21,7 @@ const HomePageCard = ({ imgUrl, id, title }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          Click Here
+          {title ? title : 'Click Here for Link'}
         </Button>
       </Card.Footer>
     </Card>

@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Topics from './Topics';
+import Trending from './Trending';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
 const HomePage = () => {
@@ -36,7 +36,7 @@ const HomePage = () => {
           </Jumbotron>
           <h1>Trending Memes: </h1>
           {
-            trendingMeme && <Topics trendingMeme={trendingMeme}/>
+            trendingMeme && <Trending trendingMeme={trendingMeme}/>
           }
         </Col>
       </Row>

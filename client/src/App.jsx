@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-//import ErrorPage from './components/ErrorPage'
 import MemePage from './components/MemePage';
 import HomePage from './components/HomePage';
 import ErrorPage from './components/ErrorPage';
 import SearchPage from './components/SearchPage';
 import SearchNav from './components/SearchNav';
+import Credit from './components/Credit';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 const App = () => {
@@ -26,11 +26,12 @@ const App = () => {
           exact
           path="/search"
           render={(props) => {
-            return <SearchPage {...props} results={results} />;
+            return <SearchPage {...props} searchTerm={searchTerm} results={results} />;
           }}
         />
         
       </Switch>
+      <Credit />
     </Router>
   );
 };

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const TopicCard = ({ searchData }) => {
+const SearchCard = ({ searchData }) => {
   const history = useHistory();
 
   const handleNavigate = () => {
@@ -15,7 +15,7 @@ const TopicCard = ({ searchData }) => {
       <Card.Body>
         <Card.Img variant="top" 
         src={searchData.embed_url}
-        alt={searchData.title}
+        alt={searchData.title ? searchData.title : 'a meme'}
         />
       </Card.Body>
       <Card.Footer>
@@ -24,11 +24,11 @@ const TopicCard = ({ searchData }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          Click Here
+          {searchData.title ? searchData.title : 'Click Here for Link'}
         </Button>
       </Card.Footer>
     </Card>
   );
 };
 
-export default TopicCard;
+export default SearchCard;

@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomePageCard from './HomePageCard';
 
-const Topics = ({trendingMeme}) => {
+const Trending = ({trendingMeme}) => {
 
   const RowStyle = {
     marginBottom: '100px'
@@ -16,7 +16,7 @@ const Topics = ({trendingMeme}) => {
         <Col xs={12}>
           <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
             {trendingMeme.map(item => {
-               return <HomePageCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url}  alt="Gif"/>
+               return <HomePageCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url}/>
             })}
             
           </div>
@@ -26,4 +26,4 @@ const Topics = ({trendingMeme}) => {
   );
 };
 
-export default Topics;
+export default Trending;
