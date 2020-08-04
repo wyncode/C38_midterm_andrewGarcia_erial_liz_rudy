@@ -38,8 +38,8 @@ const MemeBody = ({meme}) => {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <Alert id="more-memes" variant='secondary' style={{width: "80vw", margin:'80px auto 40px', textAlign:'center'}}>More Random Memes for Your Entertainment!</Alert>
+        <Col xs={12} style={{display:'flex', justifyContent:'center'}}>
+          <Alert id="more-memes" variant='secondary' style={{width: "80vw", marginTop: '100px', marginBottom: '20px', textAlign:'center'}}>More Random Memes for Your Entertainment!</Alert>
         </Col>
       </Row>
       <Row>
