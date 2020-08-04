@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './style.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -30,24 +31,19 @@ const ErrorPage = () => {
   return (
     <Container fluid>
       <Row>
-        <Col sm={12} md={{ span: 8, offset: 1 }}>
-          <Alert variant="danger" className="text-center">
+        <Col sm={12} md={{span: 8, offset: 1}}>        
+          <Alert id="error-alert" variant="danger">
             Sorry, your meme was not found :(
           </Alert>
-
-          <Card style={{ width: '70%' }} className="text-center mx-auto">
-      <Card.Header > </Card.Header>
-      <Card.Body>
-        <Card.Img src={errorMeme}   alt="error meme"/>
-      </Card.Body>
-      <Card.Footer className="text-muted ">
-      </Card.Footer>
-    </Card>
-        
-        </Col>
-        <Col sm={12} md={3}>
-          <SideLinks />
-        </Col>
+        <Card className="mx-auto" id="error-card">
+          <Card.Body>
+            <Card.Img src={errorMeme}   alt="error meme"/>
+          </Card.Body>
+        </Card>    
+      </Col>
+      <Col md={12} lg={3}>
+        <SideLinks />
+      </Col>
       </Row>
     </Container>
   );

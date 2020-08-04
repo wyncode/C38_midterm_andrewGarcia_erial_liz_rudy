@@ -1,5 +1,6 @@
 
 import React, {useState, useEffect} from 'react';
+import './style.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -34,7 +35,7 @@ const HomePage = () => {
                 The number one source for trending memes!
               </p>
           </Jumbotron>
-          <h1>Trending Memes: </h1>
+          <h2 id="trending">Trending Memes: </h2>
           {
             trendingMeme && <Trending trendingMeme={trendingMeme}/>
           }

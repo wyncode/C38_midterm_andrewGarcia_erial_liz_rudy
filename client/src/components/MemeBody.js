@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -26,19 +27,19 @@ const MemeBody = ({meme}) => {
   }, []);
 
   return (
-    <Container fluid>
+    <Container>
       <Row>
-        <Col sm={12} md={{ span: 8, offset: 1 }}>
+        <Col md={12} lg={9}>
            <MemeCard meme={meme} /> 
            
         </Col>
-        <Col sm={12} md={3}>
+        <Col md={12} lg={3}>
           <SideLinks />
         </Col>
       </Row>
       <Row>
         <Col>
-          <Alert variant='secondary' style={{width:'80vw', margin:'100px auto 40px', textAlign:'center'}}>More Random Memes for Your Entertainment!</Alert>
+          <Alert id="more-memes" variant='secondary' style={{width: "80vw", margin:'80px auto 40px', textAlign:'center'}}>More Random Memes for Your Entertainment!</Alert>
         </Col>
       </Row>
       <Row>

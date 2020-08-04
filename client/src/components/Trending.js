@@ -14,7 +14,7 @@ const Trending = ({trendingMeme}) => {
     <Container fluid>
       <Row style={RowStyle}>
         <Col xs={12}>
-          <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+          <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start"}}>
             {trendingMeme.map(item => {
                return <HomePageCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url}/>
             })}

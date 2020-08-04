@@ -18,7 +18,6 @@ router.get('/api/search', async (req, res) => {
       });
     });
     res.json(searchArray);
-    // res.json(data.data);
   } catch (error) {
     res.json({ error: error.toString() });
   }

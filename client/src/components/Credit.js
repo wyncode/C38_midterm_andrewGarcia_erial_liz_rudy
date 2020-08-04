@@ -1,9 +1,10 @@
 import React from 'react'
+import './style.css';
 import creditImg from './credit.png';
 
 const Credit = () => {
     return (
-        <img src={creditImg} alt="credit to GIPHY" />
+        <img id="credit" src={creditImg} alt="GIPHY credit" />
     )
 }
 
