@@ -17,7 +17,7 @@ router.get('/api/search', async (req, res) => {
         embed_url: meme.images.original.url
       });
     });
-    res.json(searchArray);
+      res.json(searchArray);
   } catch (error) {
     res.json({ error: error.toString() });
   }

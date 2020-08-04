@@ -15,11 +15,9 @@ const SearchPage = ({ results, searchTerm }) => {
       </Jumbotron>
       <Row>
         <Col style={{display:"flex", flexWrap:"wrap", alignItems: "flex-start"}}>
-          {results.map((gif) => (
-            <>
-              return <SearchCard key={gif.id} searchData={gif} />
-            </>
-          ))}
+          {results.map((gif) => {
+            return <SearchCard key={gif.id} searchData={gif} />
+          })}
         </Col>
       </Row>
     </Container>

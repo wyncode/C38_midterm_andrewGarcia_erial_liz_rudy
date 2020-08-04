@@ -18,14 +18,9 @@ const ErrorPage = () => {
 
   useEffect(() => {
     let errorArray = [e1, e2, e3, e4, e5];
-
-      errorArray = errorArray.filter((error) => {
-        return error !== errorMeme;
-      })
-
-      let randomIndex = Math.floor(Math.random() * errorArray.length);
-      let randomError = errorArray[randomIndex];
-      setErrorMeme(randomError); 
+    let randomIndex = Math.floor(Math.random() * errorArray.length);
+    let randomError = errorArray[randomIndex];
+    setErrorMeme(randomError); 
   }, [])
 
   return (
