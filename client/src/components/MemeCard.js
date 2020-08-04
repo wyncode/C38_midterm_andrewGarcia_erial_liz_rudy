@@ -22,7 +22,7 @@ const MemeCard = ({meme}) => {
     <Card style={{ width: '70%' }} className="text-center mx-auto">
       <Card.Header > <b>{meme.title}</b> </Card.Header>
       <Card.Body>
-        <Card.Img src={meme.embed_url}   alt={meme.title}/>
+        <Card.Img src={meme.embed_url}   alt={meme.title ? meme.title : 'a meme'}/>
       </Card.Body>
       <Card.Footer className="text-muted ">
         <OverlayTrigger trigger="click" placement="right" overlay={popover}>

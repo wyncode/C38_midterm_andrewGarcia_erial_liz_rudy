@@ -20,7 +20,6 @@ const MemeBody = ({meme}) => {
           }})
       .then(res => res.json())
       .then(data => {
-     console.log(data);
         setRandomMeme(data);
       })
       .catch(error => console.error(error))
@@ -45,7 +44,7 @@ const MemeBody = ({meme}) => {
       <Row>
         <Col style={{display:'flex', flexWrap:'wrap', justifyContent:"center"}}>
         {randomMeme.map(item => {
-               return <RandomCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url}  alt="Gif"/>
+               return <RandomCard key={item.id} id={item.id} title={item.title} imgUrl={item.img_url} />
             })}
         </Col>
       </Row>

@@ -13,7 +13,7 @@ const RandomCard = ({ id, title, imgUrl }) => {
   return (
     <Card style={{ width: '300px', margin: "10px"}}>
       <Card.Body>
-        <Card.Img variant="top" src={imgUrl}  alt="Gif"/>
+        <Card.Img variant="top" src={imgUrl}  alt={title ? title : 'a meme'}/>
       </Card.Body>
       <Card.Footer>
         <Button
@@ -21,7 +21,7 @@ const RandomCard = ({ id, title, imgUrl }) => {
           style={{ width: '100%' }}
           variant="secondary"
         >
-          Click Here
+          {title ? title : 'Click Here for Link'}
         </Button>
       </Card.Footer>
     </Card>

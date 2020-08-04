@@ -1,8 +1,11 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const SideLinks = () => {
+
+  let history = useHistory();
   const rowStyle = {
     padding: '20px',
     textAlign: 'center'
@@ -11,6 +14,10 @@ const SideLinks = () => {
   return (
     <>
       <div style={rowStyle}>
+        <Button style={{width: "70%"}} variant="dark" onClick={() => history.goBack()}>Back</Button>
+      </div>
+      <div style={rowStyle}>
+
         <ButtonGroup
           style={{ width: '70%' }}
           vertical

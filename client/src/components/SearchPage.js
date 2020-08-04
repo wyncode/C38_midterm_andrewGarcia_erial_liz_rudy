@@ -2,20 +2,20 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import TopicCard from './TopicCard';
+import SearchCard from './SearchCard';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
-const SearchPage = ({ results }) => {
+const SearchPage = ({ results, searchTerm }) => {
   return (
     <Container>
       <Jumbotron>
-              <h1>Meme Results...</h1>
+              <h1>Looking for {searchTerm} Memes...</h1>
           </Jumbotron>
       <Row>
         <Col style={{display:"flex", flexWrap:"wrap"}}>
           {results.map((gif) => (
             <>
-              <TopicCard searchData={gif} />
+              <SearchCard key={gif.id} searchData={gif} />
             </>
           ))}
         </Col>
