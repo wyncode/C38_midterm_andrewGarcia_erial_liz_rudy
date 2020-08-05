@@ -21,6 +21,16 @@ During these times of pandemic, we want to offer a fun website where everyone ca
 
 We are a group of four Wyncode students who wanted to use this opportunity to share our love of memes and bring some positivity to the world. Thanks to the GIPHY Developer API, we were able to achieve this goal.
 
+A little more about us:
+
+**Liz W.**: Full Stack Web Development student from Wyncode's Cohort 38. Currently enjoying the journey of transitioning my career from retail management to web developer!
+
+**Erialbania L.**:
+
+**Andrew G.**
+
+**Rodolfo R.**
+
 ## How
 
 #### Dependencies
