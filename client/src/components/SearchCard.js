@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 const SearchCard = ({ searchData }) => {
+
   const history = useHistory();
 
   const handleNavigate = () => {
@@ -11,11 +12,12 @@ const SearchCard = ({ searchData }) => {
   };
 
   return (
-    <Card style={{ width: '200px', margin: "10px"}}>
+    <Card style={{ width: '200px', margin: '10px' }}>
       <Card.Body>
-        <Card.Img variant="top" 
-        src={searchData.embed_url}
-        alt={searchData.title ? searchData.title : 'a meme'}
+        <Card.Img
+          variant="top"
+          src={searchData.embed_url}
+          alt={searchData.title ? searchData.title : 'a meme'}
         />
       </Card.Body>
       <Card.Footer>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
+import './components/style.css';
 import MemePage from './components/MemePage';
 import HomePage from './components/HomePage';
 import ErrorPage from './components/ErrorPage';
 import SearchPage from './components/SearchPage';
 import SearchNav from './components/SearchNav';
-import Credit from './components/Credit';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Scroll from './components/Scroll';
 
@@ -14,6 +13,7 @@ const App = () => {
   const [results, setResults] = useState([]);
 
   return (
+    <span className="app">
     <Router>
       <Scroll />
       <SearchNav
@@ -29,13 +29,18 @@ const App = () => {
           exact
           path="/search"
           render={(props) => {
-            return <SearchPage {...props} searchTerm={searchTerm} results={results} />;
+            return (
+              <SearchPage
+                {...props}
+                searchTerm={searchTerm}
+                results={results}
+              />
+            );
           }}
         />
-        
       </Switch>
-      <Credit />
     </Router>
+    </span>
   );
 };
 
