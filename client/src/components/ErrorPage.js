@@ -36,7 +36,7 @@ const ErrorPage = () => {
           </Card>
         </Col>
         <Col sm={12} lg={3}>
-            <SideLinks />
+          <SideLinks />
         </Col>
       </Row>
     </Container>

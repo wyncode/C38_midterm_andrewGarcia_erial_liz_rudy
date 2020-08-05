@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 const SearchCard = ({ searchData }) => {
-
   const history = useHistory();
 
   const handleNavigate = () => {

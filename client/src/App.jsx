@@ -14,32 +14,32 @@ const App = () => {
 
   return (
     <span className="app">
-    <Router>
-      <Scroll />
-      <SearchNav
-        searchTerm={searchTerm}
-        setResults={setResults}
-        setSearchTerm={setSearchTerm}
-      />
-      <Switch>
-        <Route exact path="/meme/:id" component={MemePage} />
-        <Route exact path="/error" component={ErrorPage} />
-        <Route exact path="/" component={HomePage} />
-        <Route
-          exact
-          path="/search"
-          render={(props) => {
-            return (
-              <SearchPage
-                {...props}
-                searchTerm={searchTerm}
-                results={results}
-              />
-            );
-          }}
+      <Router>
+        <Scroll />
+        <SearchNav
+          searchTerm={searchTerm}
+          setResults={setResults}
+          setSearchTerm={setSearchTerm}
         />
-      </Switch>
-    </Router>
+        <Switch>
+          <Route exact path="/meme/:id" component={MemePage} />
+          <Route exact path="/error" component={ErrorPage} />
+          <Route exact path="/" component={HomePage} />
+          <Route
+            exact
+            path="/search"
+            render={(props) => {
+              return (
+                <SearchPage
+                  {...props}
+                  searchTerm={searchTerm}
+                  results={results}
+                />
+              );
+            }}
+          />
+        </Switch>
+      </Router>
     </span>
   );
 };
