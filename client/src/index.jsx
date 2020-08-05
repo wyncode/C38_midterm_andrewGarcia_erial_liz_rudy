@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Credit from './components/Credit'
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/style.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render([<App key="1" />, <Credit key="2" />], document.getElementById('root'));
