@@ -11,6 +11,7 @@ This is a completed project for the Wyncode midterm assignment.
 ## Screenshots
 
 <img src="./screenshot.png" />
+<img src="./client/src/components/images/meme_park_logo_circle.png">
 
 ## Why Memes?
 
