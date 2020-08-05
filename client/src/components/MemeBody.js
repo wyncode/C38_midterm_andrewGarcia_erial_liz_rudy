@@ -34,7 +34,7 @@ const MemeBody = ({meme}) => {
            
         </Col>
         <Col md={12} lg={3}>
-          <SideLinks />
+          <SideLinks meme={meme}/>
         </Col>
       </Row>
       <Row>
