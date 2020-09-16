@@ -27,9 +27,9 @@ A little more about us:
 
 **Erialbania L.:** Full Stack Web Development student from Wyncode's Cohort 38. Former digital marketing coordinator looking to make a career change into the tech industry.
 
-**Andrew G.:** Full Stack Web Development student from Wyncode's Cohort 38.  Freelance musician/producer with HR management experience.  Looking to transition into the tech industry as well as implement programming to my professional endeavours.
+**Andrew G.:** Full Stack Web Development student from Wyncode's Cohort 38. Freelance musician/producer with HR management experience. Looking to transition into the tech industry as well as implement programming to my professional endeavours.
 
-**Rodolfo R.:** Full Stack Web Development student from Wyncode’s 38. Form  Head Chef looking for a new path in my career into the world of Bug Bunts. 
+**Rodolfo R.:** Full Stack Web Development student from Wyncode’s 38. Former Head Chef looking for a new path in my career into the world of Bug Bunts.
 
 ## How
 
@@ -57,6 +57,6 @@ The project uses the following dependencies:
 
 #### Deploy
 
-Our project is deployed at [https://murmuring-ravine-09544.herokuapp.com/](https://murmuring-ravine-09544.herokuapp.com/)
+Our project is deployed at [https://meme-park.herokuapp.com/](https://meme-park.herokuapp.com/)
 
 <hr/>
